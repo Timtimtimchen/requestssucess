@@ -1,0 +1,15 @@
+import requests
+
+data = {
+    "symptoms":"頭痛 發燒 流鼻水",
+    "duration":"3",
+    "medications":"沒有",
+    "medication_name":"",
+    "food":"no"
+}
+hea = {"User-Agent":
+"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Mobile Safari/537.36"}
+
+a = requests.post("http://timtimtimtimtim.pythonanywhere.com/%E5%B8%A5tim%E7%B5%90%E6%9E%9C%E5%88%86%E6%9E%90",headers=hea,data = data)
+
+print(a.text)
